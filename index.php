@@ -18,7 +18,18 @@
 
 	//CARREGA UM USUARIO USANDO O LOGIN E UMA SENHA
 
-	$usuario = new Usuario();
-	$usuario->login("user","12345");
+	//$usuario = new Usuario();
+	//$usuario->login("user","12345");
+	//INSERINDO USUÁRIO NO BANCO
+	//$aluno = new Usuario("teste","@teste1233");
+	//$aluno->insert();
+	//echo $aluno;
+	//echo $usuario;
+
+	//ATUALIZANDO UM USUARIO OU SENHA DO BANCO
+
+	$usuario = new Usuario ();
+	$usuario->loadById(10);
+	$usuario->update("professor","prof123");
 	echo $usuario;
  ?>
