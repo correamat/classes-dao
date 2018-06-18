@@ -109,6 +109,18 @@
 
 		}
 
+		public function delete(){
+
+			$sql = new Sql();
+			$sql->query("DELETE FROM tb_usuarios WHERE idusuario=:id",array(
+			":id"=>self::getIdusuario()));
+
+			self::setIdusuario(0);
+			self::setLogin("");
+			self::setSenha("");
+			self::setDataCadastro(new DateTime());
+		}
+
 		public function setData($data){
 
 			$this->setIdusuario($data['idusuario']);

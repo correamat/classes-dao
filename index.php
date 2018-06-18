@@ -28,8 +28,16 @@
 
 	//ATUALIZANDO UM USUARIO OU SENHA DO BANCO
 
-	$usuario = new Usuario ();
+	/*$usuario = new Usuario ();
 	$usuario->loadById(10);
 	$usuario->update("professor","prof123");
+	echo $usuario;
+	*/
+
+	//DELETANDO UM USUÁRIO
+
+	$usuario = new Usuario();
+	$usuario->loadById(8);
+	$usuario->delete();
 	echo $usuario;
  ?>
